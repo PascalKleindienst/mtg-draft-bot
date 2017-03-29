@@ -4,6 +4,9 @@ from abc import ABCMeta
 class Strategy:
     __metaclass__ = ABCMeta
 
+    def check(self):
+        raise NotImplementedError
+
     @classmethod
     def analyze_content(cls, text, kwic):
         """

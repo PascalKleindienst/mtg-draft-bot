@@ -12,4 +12,8 @@ python:
 
 install: "pip install -r requirements.txt"
 
-script: nosetests --with-coverage --cover-erase --cover-package=
+script: nosetests --with-coverage --cover-erase --cover-package=Memnarch
+
+addons:
+    code_climate:
+        repo_token: 513c8604938d594f1089353a46f9619a1c1ccf0c199d202511271763c3c68eb4

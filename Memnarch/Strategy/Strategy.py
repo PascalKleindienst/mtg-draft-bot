@@ -4,7 +4,8 @@ from abc import ABCMeta
 class Strategy:
     __metaclass__ = ABCMeta
 
-    def check(self):
+    @classmethod
+    def check(cls, card):
         raise NotImplementedError
 
     @classmethod

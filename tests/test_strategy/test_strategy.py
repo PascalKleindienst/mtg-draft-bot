@@ -18,4 +18,4 @@ class TestStrategy(object):
 
     @raises(NotImplementedError)
     def test_check(self):
-        self.strategy.check()
+        self.strategy.check(None)

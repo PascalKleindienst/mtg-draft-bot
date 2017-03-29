@@ -21,7 +21,7 @@ class Strategy:
 
         for token in text:
             for kw in kwic:
-                if kw == token:
+                if kw.lower() == token:
                     score = score + 1
 
         return score

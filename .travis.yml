@@ -9,10 +9,20 @@ python:
   - "3.6"
   - "3.7-dev" # 3.7 development branch
   - "nightly" # currently points to 3.7-dev
+  # PyPy versions
+  - "pypy"  # PyPy2 2.5.0
+  - "pypy3" # Pypy3 2.4.0
 
 install: "pip install -r requirements.txt"
 
 script: nosetests --with-coverage --cover-erase --cover-package=Memnarch
+
+matrix:
+  allow_failures:
+  - python: 3.2 # there seems to be an error with nose and coverage
+  - python: nightly
+  - python: pypy
+  - python: pypy3
 
 addons:
     code_climate:

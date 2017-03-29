@@ -19,10 +19,11 @@ script: nosetests --with-coverage --cover-erase --cover-package=Memnarch
 
 matrix:
   allow_failures:
-  - python: 3.2 # there seems to be an error with nose and coverage
-  - python: nightly
-  - python: pypy
-  - python: pypy3
+  # there seems to be an error with nose and coverage
+  - python: "3.2"
+  - python: "nightly"
+  - python: "pypy"
+  - python: "pypy3"
 
 addons:
     code_climate:

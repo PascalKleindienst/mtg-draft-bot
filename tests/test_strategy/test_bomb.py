@@ -10,8 +10,14 @@ class TestBomb(object):
         """This method is run once for each class before any tests are run"""
         cls.strategy = Bomb()
         cls.cards = [
-            {'text': 'Flying'},
-            {'text': 'Trample'},
+            {
+                'name': 'Angelic Overseer',
+                'text': "Flying\nAs long as you control a Human, Angelic Overseer has hexproof and is indestructible.",
+                'types': ['Creature'],
+                'cmc': 5,
+                'power': 5,
+                'toughness': 3
+            }
         ]
 
     @classmethod
@@ -24,9 +30,6 @@ class TestBomb(object):
 
     def test_is_instance_of(self):
         assert_is_instance(self.strategy, Strategy)
-
-    def test_check_init(self):
-        assert_true(type(self.strategy.abilities) is tuple)
 
     def is_true(self, card):
         assert_true(self.strategy.check(card))

@@ -1,4 +1,4 @@
-from nose.tools import assert_true, assert_is_instance
+from nose.tools import assert_true
 
 from Memnarch.Strategy.Bomb import Bomb
 from Memnarch.Strategy.Strategy import Strategy
@@ -29,7 +29,7 @@ class TestBomb(object):
             yield self.is_true, card
 
     def test_is_instance_of(self):
-        assert_is_instance(self.strategy, Strategy)
+        assert_true(isinstance(self.strategy, Strategy))
 
     def is_true(self, card):
         assert_true(self.strategy.check(card))

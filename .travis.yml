@@ -27,7 +27,3 @@ matrix:
 
 after_sucess:
   - CODECLIMATE_REPO_TOKEN=513c8604938d594f1089353a46f9619a1c1ccf0c199d202511271763c3c68eb4 codeclimate-test-reporter
-
-addons:
-    code_climate:
-        repo_token: 513c8604938d594f1089353a46f9619a1c1ccf0c199d202511271763c3c68eb4
